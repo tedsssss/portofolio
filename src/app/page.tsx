@@ -8,6 +8,8 @@ import Link from "next/link";
 import { FaLinkedin, FaEnvelope, FaInstagram, FaLock, FaDotCircle } from "react-icons/fa";
 import { useLanguage } from "../context/LangContext"; // Assuming layout.tsx exports useLanguage
 import { EducationItem, ExperienceItem, SkillItem, ProjectItem } from "../lib/translations"; // Import interfaces
+import Blobs from '@/components/Blobs';
+
 
 // Animation Variants (remain the same as they are style-based)
 const sectionTitleVariants = {
@@ -102,12 +104,45 @@ export default function HomePage() {
   const heroImageVariants = {
     initial: { opacity: 0, scale: 0.6, rotateY: 90 },
     animate: { opacity: 1, scale: 1, rotateY: 0, transition: { duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.5 } },
-    hover: { scale: 1.05, y: -10, boxShadow: "0px 0px 35px rgba(0, 240, 255, 0.6)", transition: { type: "spring", stiffness: 250, damping: 15 } }
-  };
+    hover: { scale: 1.05, y: -10, boxShadow: "none", transition: { type: "spring", stiffness: 250, damping: 15 } }
+  };  
+
+    // Variants for the card flip mechanism itself
+    const flipCardContainerVariants = { // Parent for flip, triggers children
+      rest: {}, // Initial state for the flip container
+      hover: {}  // Hover state for the flip container (propagates to children)
+    };
+  
+    const frontCardFlipVariant = {
+      rest: { // Front card visible state
+        rotateY: 0,
+        transition: { duration: 0.6, ease: "easeInOut" },
+        zIndex: 2,
+      },
+      hover: { // Front card hidden/flipped state
+        rotateY: 180,
+        transition: { duration: 0.6, ease: "easeInOut" },
+        zIndex: 1,
+      }
+    };
+  
+    const backCardFlipVariant = {
+      rest: { // Back card hidden/flipped away state
+        rotateY: -180,
+        transition: { duration: 0.6, ease: "easeInOut" },
+        zIndex: 1,
+      },
+      hover: { // Back card visible state
+        rotateY: 0,
+        transition: { duration: 0.6, ease: "easeInOut" },
+        zIndex: 2,
+      }
+    };
+
   const heroButtonVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: (i: number) => ({ opacity: 1, y: 0, transition: { type: "spring", stiffness: 150, damping: 15, delay: 0.8 + i * 0.1 } }),
-    hover: { scale: 1.05, boxShadow: "0px 0px 25px rgba(0, 240, 255, 0.7)" },
+    hover: { scale: 1.05, boxShadow: "0px 0px 0px rgba(0, 240, 255, 0.7)" },
     tap: { scale: 0.95 }
   };
 
@@ -144,19 +179,7 @@ export default function HomePage() {
 
       {/* ===== HERO SECTION ===== */}
       <section id="hero" className="min-h-screen flex items-center bg-brand-dark pt-24 md:pt-20 relative overflow-hidden">
-        {/* Animated Blobs */}
-        <motion.div
-          className="absolute top-1/4 left-1/4 w-32 h-32 bg-brand-teal/20 rounded-full filter blur-2xl animate-blob"
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
-        ></motion.div>
-        <motion.div
-          className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-sky-500/20 rounded-full filter blur-2xl animate-blob animation-delay-2000"
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.7 }}
-        ></motion.div>
+        <Blobs />
 
         <div className="container mx-auto px-6 py-16 flex flex-col md:flex-row items-center justify-center text-center gap-x-16 gap-y-10 z-10">
           {/* TEKS */}
@@ -227,25 +250,63 @@ export default function HomePage() {
 
           {/* FOTO PROFIL */}
           <motion.div
-            className="md:w-3/12 mb-12 md:mb-0"
-            variants={heroImageVariants}
+            className="md:w-3/12 mb-12 md:mb-0" // Main container for the profile image section
+            variants={heroImageVariants}      // Handles entry animation and overall hover (e.g., scale)
             initial="initial"
             animate="animate"
-            whileHover="hover"
+            whileHover="hover"                 // Applies heroImageVariants.hover
           >
-            <div className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 bg-gradient-to-br from-brand-teal to-teal-700 rounded-full shadow-2xl flex items-center justify-center p-3 mx-auto relative">
-              <div className="absolute inset-0 rounded-full bg-brand-teal opacity-40 filter blur-xl animate-pulse-slow"></div>
-              <div className="w-full h-full bg-brand-dark rounded-full relative overflow-hidden z-10">
-                <Image
-                  src="/logo/pic.jpg" // This path should be correct in your public folder
-                  alt={language === 'id' ? "Foto profil Teds" : "Teds profile picture"}
-                  fill // Use fill for responsive images within a sized container
-                  className="object-cover rounded-full" // Ensure image covers the area
-                  sizes="(min-width: 768px) 20rem, (min-width: 640px) 18rem, 16rem"
-                  onError={(e) => (e.currentTarget.src = 'https://placehold.co/320x320/1a202c/00f0ff?text=Teds')} // Placeholder
-                />
-              </div>
-            </div>
+            <motion.div // This div is the direct parent for the flipping cards and handles hover for flip
+              className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 mx-auto relative cursor-pointer"
+              style={{ perspective: '1000px' }} // Crucial for 3D effect
+              variants={flipCardContainerVariants} // Empty, but its 'hover' state triggers children
+              initial="rest"                     // Initial state for flip mechanism
+              whileHover="hover"                 // This 'hover' state will be propagated to children cards
+            >
+              {/* Front Side of the Card */}
+              <motion.div
+                className="absolute w-full h-full"
+                style={{ transformStyle: "preserve-3d", backfaceVisibility: "hidden" }} // Necessary for 3D and hiding back
+                variants={frontCardFlipVariant} // Controls front card's flip animation
+              >
+                <div className="w-full h-full bg-gradient-to-br from-brand-teal to-teal-700 rounded-full flex items-center justify-center p-3 relative">
+                  <div className="absolute inset-0 rounded-full bg-brand-teal opacity-40 filter blur-xl animate-pulse-slow"></div>
+                  <div className="w-full h-full bg-brand-dark rounded-full relative overflow-hidden z-10">
+                    <Image
+                      src="/logo/pic.jpg" // Your original profile picture
+                      alt={language === 'id' ? "Foto profil Teds (Depan)" : "Teds profile picture (Front)"}
+                      fill
+                      className="object-cover rounded-full"
+                      sizes="(min-width: 768px) 20rem, (min-width: 640px) 18rem, 16rem"
+                      onError={(e) => (e.currentTarget.src = 'https://placehold.co/320x320/1a202c/00f0ff?text=Teds')}
+                      priority // Good for LCP
+                    />
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Back Side of the Card */}
+              <motion.div
+                className="absolute w-full h-full"
+                style={{ transformStyle: "preserve-3d", backfaceVisibility: "hidden" }} // Necessary for 3D and hiding back
+                variants={backCardFlipVariant} // Controls back card's flip animation
+              >
+                <div className="w-full h-full bg-brand-teal from-purple-600 to-indigo-700 rounded-full flex items-center justify-center p-3 relative"> {/* Example: Different background for back */}
+                  {/* You can add a different pulse or content for the back if desired */}
+                  {/* <div className="absolute inset-0 rounded-full bg-purple-500 opacity-40 filter blur-xl animate-pulse-slow"></div> */}
+                  <div className="w-full h-full bg-brand-dark rounded-full relative overflow-hidden z-10">
+                    <Image
+                      src="/logo/pic.jpg" // IMPORTANT: Change this to the path of your second image
+                      alt={language === 'id' ? "Foto profil Teds (Belakang)" : "Teds profile picture (Back)"}
+                      fill
+                      className="object-cover rounded-full"
+                      sizes="(min-width: 768px) 20rem, (min-width: 640px) 18rem, 16rem"
+                      onError={(e) => (e.currentTarget.src = 'https://placehold.co/320x320/3A006F/FFFFFF?text=Back')} // Placeholder for back image
+                    />
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
           </motion.div>
         </div>
       </section>
@@ -468,7 +529,7 @@ export default function HomePage() {
                 className="bg-brand-light-gray rounded-xl shadow-xl overflow-hidden flex flex-col group"
                 variants={portfolioCardHoverVariants}
                 initial="rest" // Initial opacity and y set by whileInView
-                animate={{opacity:0, y:50, filter:"blur(5px)"}} // Start hidden before viewport entry
+                animate={{opacity:20, y:50, filter:"blur(5px)"}} // Start hidden before viewport entry
                 whileHover="hover"
                 whileInView={{ opacity: 1, y: 0, filter:"blur(0px)", transition: { duration: 0.6, delay: index * 0.15, ease: "circOut" } }}
                 viewport={{ once: true, amount: 0.2 }}

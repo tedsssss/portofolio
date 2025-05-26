@@ -133,7 +133,7 @@ export const translations: Translations = {
         role: "Digital Product Design Lead",
         company: "Ristek Fasilkom UI",
         year: "March 2025 - Present",
-        description: "Leading the digital product design team at Ristek Fasilkom UI, responsible for strategic vision, concept development, and final design quality. Collaborates closely with product managers and developers to ensure innovative solutions that meet user needs.",
+        description: "After gaining extensive experience in digital product design, I was finally entrusted as the Lead of the Digital Product Design SIG at RISTEK Faculty of Computer Science, Universitas Indonesia.",
         logoUrl: "/logo/ristek.png",
         memoryImageUrls: ["/logo/Lead DPD.jpg", "/memories/ristek-team-collab.jpg"],
         highlights: [
@@ -326,7 +326,7 @@ export const translations: Translations = {
         role: "Anggota Senior Divisi Desain Produk Digital",
         company: "Ristek Fasilkom UI",
         year: "Mar 2025 - Sekarang",
-        description: "Memimpin tim desain produk digital di Ristek Fasilkom UI, bertanggung jawab atas visi strategis, pengembangan konsep, dan kualitas desain akhir. Berkolaborasi erat dengan manajer produk dan pengembang untuk memastikan solusi inovatif yang memenuhi kebutuhan pengguna.",
+        description: "Setelah memperoleh banyak pengalaman dalam desain produk digital, saya akhirnya dipercaya untuk menjabat sebagai Lead dari Special Interest Group (SIG) Digital Product Design di RISTEK Fakultas Ilmu Komputer, Universitas Indonesia.",
         logoUrl: "/logo/ristek.png",
         memoryImageUrls: ["/logo/Lead DPD.jpg", "/memories/ristek-team-collab.jpg"],
         highlights: [
