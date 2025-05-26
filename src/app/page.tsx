@@ -5,7 +5,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { FaLinkedin, FaGithub, FaEnvelope, FaInstagram, FaLock, FaDotCircle } from "react-icons/fa";
+import { FaLinkedin, FaEnvelope, FaInstagram, FaLock, FaDotCircle } from "react-icons/fa";
 import { useLanguage } from "./layout"; // Assuming layout.tsx exports useLanguage
 import { EducationItem, ExperienceItem, SkillItem, ProjectItem } from "../lib/translations"; // Import interfaces
 
