@@ -5,7 +5,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { FaFigma, FaReact, FaNodeJs, FaLinkedin, FaGithub, FaEnvelope, FaInstagram, FaPalette, FaSearch, FaLock, FaCode, FaChevronLeft, FaChevronRight, FaBuilding, FaBriefcase, FaImages, FaUniversity, FaDotCircle, FaCircle } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaEnvelope, FaInstagram, FaLock, FaDotCircle } from "react-icons/fa";
 import { useLanguage } from "./layout"; // Assuming layout.tsx exports useLanguage
 import { EducationItem, ExperienceItem, SkillItem, ProjectItem } from "../lib/translations"; // Import interfaces
 

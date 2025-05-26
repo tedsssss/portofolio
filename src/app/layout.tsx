@@ -119,7 +119,7 @@ const Navbar = () => {
             title={tooltipText}
           >
             {/* Menggunakan tag <img> standar untuk CDN */}
-            <img
+            <Image
               src={flagUrl}
               alt={flagAltText}
               width="28" // Sesuaikan ukuran sesuai kebutuhan
