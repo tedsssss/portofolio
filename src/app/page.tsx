@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { FaLinkedin, FaEnvelope, FaInstagram, FaLock, FaDotCircle } from "react-icons/fa";
-import { useLanguage } from "./layout"; // Assuming layout.tsx exports useLanguage
+import { useLanguage } from "../context/LangContext"; // Assuming layout.tsx exports useLanguage
 import { EducationItem, ExperienceItem, SkillItem, ProjectItem } from "../lib/translations"; // Import interfaces
 
 // Animation Variants (remain the same as they are style-based)
