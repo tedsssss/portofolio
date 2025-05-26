@@ -9,6 +9,8 @@ import { motion } from "framer-motion";
 import CustomCursor from "@/components/CustomCursor"; // Assuming CustomCursor.tsx is in src/components/
 import React, { useState, createContext, useContext, ReactNode, useEffect } from 'react';
 import { translations, NavItem } from "../lib/translations"; // Pastikan path ini benar
+import Head from "next/head";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -153,19 +155,19 @@ const Footer = () => {
 // Komponen internal untuk mengatur atribut lang pada <html> dan merender <head>
 const RootElements = ({ children, lang }: { children: ReactNode, lang: string }) => {
   return (
-    <html lang={lang} className="scroll-smooth">
-      <head>
+    <>
+      <Head>
         <title>Theodore Kasyfillah</title>
         <meta name="description" content="Portfolio Theodore Kasyfillah" />
-        <link rel="icon" href="/Logo teds.png" sizes="any" />
-      </head>
+        <link rel="icon" href="/Logo teds.png" />
+      </Head>
       <body className={`${inter.className} bg-brand-dark text-white`}>
         <CustomCursor />
         <Navbar />
         <main>{children}</main>
         <Footer />
       </body>
-    </html>
+    </>
   );
 };
 
