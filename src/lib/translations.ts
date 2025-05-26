@@ -5,8 +5,9 @@
 import { FaFigma, FaSearch, FaPalette, FaCode } from "react-icons/fa";
 import React from "react"; // Import React for JSX in icon type
 
-// Define a type for skill icons if they are React components
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type SkillIcon = React.ReactElement<any, any>;
+
 
 export interface NavItem {
   name: string;

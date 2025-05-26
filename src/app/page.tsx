@@ -111,12 +111,12 @@ export default function HomePage() {
     tap: { scale: 0.95 }
   };
 
-  const handleContactSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // In a real app, you'd send data to a backend here.
-    setContactMessage(currentTranslations.contactFormSubmitSuccess);
-    setTimeout(() => setContactMessage(""), 3000); // Clear message after 3 seconds
-  };
+  // const handleContactSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
+  //   // In a real app, you'd send data to a backend here.
+  //   setContactMessage(currentTranslations.contactFormSubmitSuccess);
+  //   setTimeout(() => setContactMessage(""), 3000); // Clear message after 3 seconds
+  // };
 
   // Data from translations
   const aboutMeText = currentTranslations.heroAboutMe;
