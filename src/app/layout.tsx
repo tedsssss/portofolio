@@ -14,7 +14,7 @@ export const metadata = {
 
   icons: {
     icon: "/logo/Logo teds petak.png",     // favicon standar
-    shortcut: "/logo/Thumbnail.png", // favicon shortcut (biasanya sama)
+    shortcut: "/logo/Logo teds petak.png", // favicon shortcut (biasanya sama)
     apple: "/logo/Logo teds petak.png",    // favicon untuk iOS (apple touch icon)
   },
 
@@ -25,7 +25,7 @@ export const metadata = {
     siteName: "Theodore Kasyfillah",
     images: [
       {
-        url: "/logo/Thumbnail.png", // path lokal atau URL absolut
+        url: "https://theodorekasyfillah.netlify.app/logo/Thumbnail.png", // path lokal atau URL absolut
         width: 1200,
         height: 630,
         alt: "Theodore Kasyfillah Portfolio Preview",
@@ -39,7 +39,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Theodore Kasyfillah",
     description: "Portfolio Theodore Kasyfillah",
-    images: ["/logo/Thumbnail.png"],
+    images: ["https://theodorekasyfillah.netlify.app/logo/Thumbnail.png"],
     creator: "@tedskasy",
   },
 };
