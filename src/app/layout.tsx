@@ -25,7 +25,7 @@ export const metadata = {
     siteName: "Theodore Kasyfillah",
     images: [
       {
-        url: "/logo/Logo teds.png", // path lokal atau URL absolut
+        url: "/logo/Thumbnail.png", // path lokal atau URL absolut
         width: 1200,
         height: 630,
         alt: "Theodore Kasyfillah Portfolio Preview",
@@ -39,7 +39,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Theodore Kasyfillah",
     description: "Portfolio Theodore Kasyfillah",
-    images: ["/logo/Logo teds.png"],
+    images: ["/logo/Thumbnail.png"],
     creator: "@tedskasy",
   },
 };
