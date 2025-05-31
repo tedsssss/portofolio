@@ -14,7 +14,7 @@ export const metadata = {
 
   icons: {
     icon: "/logo/Logo teds petak.png",     // favicon standar
-    shortcut: "/logo/Logo teds petak.png", // favicon shortcut (biasanya sama)
+    shortcut: "/logo/Thumbnail.png", // favicon shortcut (biasanya sama)
     apple: "/logo/Logo teds petak.png",    // favicon untuk iOS (apple touch icon)
   },
 
