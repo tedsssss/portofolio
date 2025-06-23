@@ -103,10 +103,10 @@ export interface Translations {
 export const translations: Translations = {
   en: {
     // Hero Section
-    heroGreeting: "Hello, I'm",
+    heroGreeting: "Hello, I'm Teds",
     heroNameAlt: "Theodore Kasyfillah Name Logo",
     heroSubtitle: "UI/UX & Digital Product Enthusiast",
-    heroAboutMe: "Hi there! I'm Theodore Kasyfillah, but you can call me Theo, Teddy, or Teds. A Penultimate Information Systems student at the University of Indonesia, I'm deeply passionate about UI/UX and Product Management. My love for art and creating interactive experiences fuels my desire to blend technical expertise with design sensibilities. I believe that the intersection of technology and art allows us to craft not only visually appealing interfaces but also meaningful, user-centric solutions. Whether working on responsive websites or designing seamless applications, my goal is to help people access information more interactively and engage with technology in a way that is both accessible and impactful.",
+    heroAboutMe: "Hi, I'm Theo an Information Systems student passionate about UI/UX and Product Management. I love blending design and tech to create user-friendly, meaningful digital experiences.",
     heroButtonResume: "My Resume",
     heroButtonContact: "Contact Me",
 
@@ -296,10 +296,10 @@ export const translations: Translations = {
   },
   id: {
     // Hero Section
-    heroGreeting: "Halo, saya",
+    heroGreeting: "Halo, saya Teds",
     heroNameAlt: "Logo Nama Theodore Kasyfillah",
     heroSubtitle: "Penggiat UI/UX & Produk Digital",
-    heroAboutMe: "Halo! Saya Theodore Kasyfillah, tapi Anda bisa memanggil saya Theo, Teddy, atau Teds. Seorang mahasiswa Sistem Informasi tingkat akhir di Universitas Indonesia, saya sangat bersemangat tentang UI/UX dan Manajemen Produk. Kecintaan saya pada seni dan menciptakan pengalaman interaktif mendorong keinginan saya untuk memadukan keahlian teknis dengan kepekaan desain. Saya percaya bahwa persimpangan teknologi dan seni memungkinkan kita untuk membuat tidak hanya antarmuka yang menarik secara visual tetapi juga solusi yang bermakna dan berpusat pada pengguna. Baik mengerjakan situs web responsif atau merancang aplikasi yang mulus, tujuan saya adalah membantu orang mengakses informasi secara lebih interaktif dan terlibat dengan teknologi dengan cara yang mudah diakses dan berdampak.",
+    heroAboutMe: "Halo, saya Theo — mahasiswa Sistem Informasi yang tertarik pada UI/UX dan Product Management. Saya suka menggabungkan desain dan teknologi untuk menciptakan pengalaman digital yang ramah dan berdampak.",
     heroButtonResume: "Resume Saya",
     heroButtonContact: "Hubungi Saya",
 
