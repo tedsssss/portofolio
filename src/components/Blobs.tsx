@@ -5,7 +5,7 @@ export default function FunAnimatedBlobs() {
     <>
       {/* === BLOBS KANAN === */}
 
-      {/* Blob 1: besar, cyan blur, gerak melingkar */}
+      {/* Blob 1: besar, biru blur, gerak melingkar */}
       <motion.div
         className="absolute rounded-full filter blur-3xl"
         style={{
@@ -15,7 +15,7 @@ export default function FunAnimatedBlobs() {
           right: "25%",
           marginTop: "-80px",
           marginLeft: "-80px",
-          background: "radial-gradient(circle at 30% 30%, #00f0ff70, #00000050)",
+          background: "radial-gradient(circle at 30% 30%, #00304970, #669bbc40)", // Biru tua ke biru terang transparan
           zIndex: 0,
         }}
         animate={{
@@ -29,7 +29,7 @@ export default function FunAnimatedBlobs() {
         }}
       />
 
-      {/* Blob 2: sedang, silver blur, getar kecil */}
+      {/* Blob 2: sedang, putih blur, getar kecil */}
       <motion.div
         className="absolute rounded-full filter blur-xl"
         style={{
@@ -39,7 +39,7 @@ export default function FunAnimatedBlobs() {
           right: "30%",
           marginTop: "-60px",
           marginRight: "-60px",
-          background: "radial-gradient(circle at 50% 50%, #C0C0C0aa, #00000044)",
+          background: "radial-gradient(circle at 50% 50%, #ffffffbb, #ffffff33)", // Putih soft
           zIndex: 0,
         }}
         animate={{
@@ -53,7 +53,7 @@ export default function FunAnimatedBlobs() {
         }}
       />
 
-      {/* Blob 3: kecil, teal blur, scale dan opacity */}
+      {/* Blob 3: kecil, merah blur, scale dan opacity */}
       <motion.div
         className="absolute rounded-full filter blur-lg"
         style={{
@@ -63,7 +63,7 @@ export default function FunAnimatedBlobs() {
           right: "10%",
           marginBottom: "-40px",
           marginLeft: "-40px",
-          background: "radial-gradient(circle at 50% 50%, #008080bb, #00404088)",
+          background: "radial-gradient(circle at 50% 50%, #d6282888, #a3000033)", // Merah terang ke gelap
           zIndex: 0,
         }}
         animate={{
@@ -77,7 +77,7 @@ export default function FunAnimatedBlobs() {
         }}
       />
 
-      {/* === BLOBS KIRI (mirror dari kanan) === */}
+      {/* === BLOBS KIRI === */}
 
       {/* Blob 1 kiri: besar */}
       <motion.div
@@ -89,7 +89,7 @@ export default function FunAnimatedBlobs() {
           left: "25%",
           marginTop: "-80px",
           marginLeft: "-80px",
-          background: "radial-gradient(circle at 70% 70%, #00f0ff70, #00000050)",
+          background: "radial-gradient(circle at 70% 70%, #00304970, #669bbc40)",
           zIndex: 0,
         }}
         animate={{
@@ -113,7 +113,7 @@ export default function FunAnimatedBlobs() {
           left: "30%",
           marginTop: "-60px",
           marginLeft: "-60px",
-          background: "radial-gradient(circle at 50% 50%, #C0C0C0aa, #00000044)",
+          background: "radial-gradient(circle at 50% 50%, #ffffffbb, #ffffff33)",
           zIndex: 0,
         }}
         animate={{
@@ -137,7 +137,7 @@ export default function FunAnimatedBlobs() {
           left: "10%",
           marginBottom: "-40px",
           marginLeft: "-40px",
-          background: "radial-gradient(circle at 50% 50%, #008080bb, #00404088)",
+          background: "radial-gradient(circle at 50% 50%, #d6282888, #a3000033)",
           zIndex: 0,
         }}
         animate={{

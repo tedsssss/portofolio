@@ -42,6 +42,7 @@ export interface SkillItem {
 
 export interface ProjectItem {
   id: number;
+  category: string[];
   title: string;
   tags: string[];
   imageUrl: string;
@@ -119,7 +120,7 @@ export const translations: Translations = {
         degree: "Information System Student",
         institution: "Universitas Indonesia",
         year: "Aug 2022 - Now",
-        description: "An Information Systems student at the University of Indonesia with a strong interest in UI/UX and Product Management. Committed to combining technical expertise with design sensibilities to create user-centric solutions.",
+        description: "Pursuing a degree in Information Systems at Universitas Indonesia with a strong foundation in UX design, system analysis, database management, enterprise architecture, and product management. Actively involved in student organizations to sharpen collaboration and leadership abilities.",
         logoUrl: "/logo/ui.png",
         memoryImageUrls: ["/logo/Member DPD.jpg", "/logo/Member DPD.jpg", "/logo/Member DPD.jpg"],
         highlights: [
@@ -133,7 +134,7 @@ export const translations: Translations = {
         role: "Digital Product Design Lead",
         company: "Ristek Fasilkom UI",
         year: "March 2025 - Present",
-        description: "After gaining extensive experience in digital product design, I was finally entrusted as the Lead of the Digital Product Design SIG at RISTEK Faculty of Computer Science, Universitas Indonesia.",
+        description: "As Lead of the Digital Product Design SIG at RISTEK FASILKOM UI, I led talent recruitment, designed a mentoring program to build members’ UI/UX skills, and contributed to two external projects by delivering wireframes and prototypes aligned with user needs.",
         logoUrl: "/logo/ristek.png",
         memoryImageUrls: ["/logo/Lead DPD.jpg", "/memories/ristek-team-collab.jpg"],
         highlights: [
@@ -143,10 +144,23 @@ export const translations: Translations = {
         ],
       },
       {
+        role: "Creative Manager",
+        company: "COMPFEST 16",
+        year: "March 2024 - January 2025",
+        description: "Led the creative division of COMPFEST 16, managing 30 staff and 6 PICs across Visual Design, Documentation & Animation, and Decorations. Oversaw end-to-end creative strategy and execution, ensuring a cohesive visual identity. Directed team workflows, reviewed deliverables, and aligned creative output with the event’s vision to deliver an impactful audience experience.",
+        logoUrl: "/logo/compfest.jpg",
+        memoryImageUrls: ["/logo/Member DPD.jpg"],
+        highlights: [
+          "Participated in internal classes focused on strengthening UI/UX skills, from user research to usability testing.",
+          "Involved in two internal and four external projects as a junior UI/UX designer, responsible for wireframes and prototypes.",
+          "Recognized as the Best Member in Q2 for consistent dedication, collaboration, and contributions.",
+        ],
+      },
+      {
         role: "Digital Product Design Member",
         company: "Ristek Fasilkom UI",
         year: "March 2024 - January 2025",
-        description: "Contributed to multiple digital product design projects as a team member. Actively involved in user research, wireframing, interactive prototyping, and usability testing for various platforms and applications.",
+        description: "As a junior UI/UX designer in the Digital Product Design SIG, I participated in internal classes covering user research to usability testing. I contributed to two internal and four external projects by creating wireframes and prototypes, and was recognized as Best Member in Q2 for my consistent dedication and collaboration.",
         logoUrl: "/logo/ristek.png",
         memoryImageUrls: ["/logo/Member DPD.jpg"],
         highlights: [
@@ -159,13 +173,26 @@ export const translations: Translations = {
         role: "UI/UX Staff",
         company: "Open House Fasilkom UI 2023",
         year: "August 2023 - November 2023",
-        description: "Responsible for the UI/UX aspects of the 2023 Open House Fasilkom UI committee. Designed intuitive user flows and engaging interfaces for the event website and promotional digital materials.",
+        description: "Designed a user-friendly registration page by conducting user analysis and iterative improvements. Helped drive 750+ sign-ups by enhancing the user experience and aligning the flow with event goals.",
         logoUrl: "/logo/logo oh 23.png",
         memoryImageUrls: ["/logo/UIUX OH.jpg", "/memories/oh-fasilkom-event.jpg", "/memories/oh-fasilkom-booth.jpg"],
         highlights: [
           "Conducted user analysis to understand the needs and behavior of prospective students.",
           "Designed an intuitive and user-friendly registration page through iterative design and feedback.",
           "Played a key role in enhancing the user experience and ensuring a smooth registration process aligned with the event’s goals.",
+        ],
+      },
+      {
+        role: "Art & Culture Staff",
+        company: "BEM Fasilkom UI",
+        year: "April 2023 - December 2023",
+        description: "Served as a full-time staff in the Art & Culture Department, initiating art-based programs to support students’ creative growth. Designed activities that integrated arts into campus life, fostering collaboration, innovation, and critical thinking. Engaged 100+ students through events that emphasized holistic development alongside academic life.",
+        logoUrl: "/logo/BEMPA.jpg",
+        memoryImageUrls: ["/logo/Member DPD.jpg"],
+        highlights: [
+          "Participated in internal classes focused on strengthening UI/UX skills, from user research to usability testing.",
+          "Involved in two internal and four external projects as a junior UI/UX designer, responsible for wireframes and prototypes.",
+          "Recognized as the Best Member in Q2 for consistent dedication, collaboration, and contributions.",
         ],
       },
     ],
@@ -185,11 +212,12 @@ export const translations: Translations = {
     },
 
     // Portfolio Section
-    portfolioTitle: "Works of TEDS",
+    portfolioTitle: "Highlighted Works",
     projectsData: [
         {
             id: 1,
             title: "Open House Fasilkom UI 2023",
+            category: ["Real Projects"],
             tags: ["UI/UX Design", "Registration Page", "Event"],
             imageUrl: "/logo/oh 2023.png",
             description: "Designed the Home Registration Page for Open House Fasilkom UI 2023, featuring a countdown, event details, benefits, FAQs, and contact access for a seamless attendee experience.",
@@ -199,6 +227,7 @@ export const translations: Translations = {
         {
             id: 2,
             title: "Pemira Fasilkom UI 2023 Website",
+            category: ["Real Projects"],
             tags: ["UI/UX Design", "E-Voting", "Election"],
             imageUrl: "/logo/PEMIRA 2023.png",
             description: "Designed the Landing Page, Candidate Overview, and E-Voting pages for Pemira Fasilkom UI 2023, ensuring an intuitive experience with clear information, smooth navigation, and secure voting functionality.",
@@ -208,6 +237,7 @@ export const translations: Translations = {
         {
             id: 3,
             title: "SIBeasiswa NG",
+            category: ["College Projects"],
             tags: ["UI/UX Design", "CMS", "Scholarship"],
             imageUrl: "/logo/SiBeasiswa.png",
             description: "Designed a user-friendly scholarship website and CMS as part of open recruitment for Ristek Fasilkom Ul's Digital Product Design SIG. The platform simplifies scholarship discovery, application management, and document submission for students, while offering efficient admin tools for managing and reviewing submissions.",
@@ -217,6 +247,7 @@ export const translations: Translations = {
         {
             id: 4,
             title: "The 47th Jazz Goes to Campus Website",
+            category: ["Real Projects"],
             tags: ["UI/UX Design", "Event", "Festival"],
             imageUrl: "/logo/JGTC.png",
             description: "Designed for The 47th Jazz Goes to Campus Website, the Homepage introduces the event, the Gallery showcases photos and highlights, the About Us section tell the history of the event, and the Band Registration page offers a streamlined registration process for band contest participant.",
@@ -226,6 +257,7 @@ export const translations: Translations = {
         {
             id: 5,
             title: "RISTEK Summer Event Website Revamp",
+            category: ["Real Projects"],
             tags: ["UI/UX Design", "Revamp", "Tech Event"],
             imageUrl: "/logo/Summer Event.png",
             description: "Worked on a small revamp for RISTEK Summer Event 2024 website, including adjustments to the landing page and event page for improved clarity and visual flow. Added dynamic forms to streamline the registration process, making it more seamless and interactive for participants.",
@@ -235,6 +267,7 @@ export const translations: Translations = {
         {
             id: 6,
             title: "InteractEd: Redefining Early Education!",
+            category: ["College Projects"],
             tags: ["UI/UX Design", "College Project", "Education"],
             imageUrl: "/logo/InteractEd.png",
             description: "My group and I designed InteractEd for HCI course final project, InteractEd is an interactive learning platform for kids aged 6–13. It uses project-based learning to help children develop skills, explore interests, and collaborate with peers in a fun and engaging way.",
@@ -244,6 +277,7 @@ export const translations: Translations = {
         {
             id: 7,
             title: "Healthcare Mobile App",
+            category: ["Real Projects"],
             tags: ["UI/UX Design", "Mobile", "Healthcare"],
             imageUrl: "/logo/Healthcare App.png",
             description: "Designed for an e-health application as a contract project during my time as a Digital Product Design member at Ristek Fasilkom UI, the app includes features like surveys, e-learning, document management, and consultation. It provides users with a seamless and user-friendly experience, enabling easy access to health resources and efficient interaction with healthcare providers.",
@@ -253,6 +287,7 @@ export const translations: Translations = {
         {
             id: 8,
             title: "Football Super App",
+            category: ["Real Projects"],
             tags: ["UI/UX Design", "Mobile", "Football"],
             imageUrl: "/logo/Football.png",
             description: "Designed a football application as a contract project during my time as a Digital Product Design member at Ristek Fasilkom UI featuring news, standings, player and coach details, match results, and schedules. The app delivers a comprehensive and user-friendly experience, keeping fans informed and engaged with their favorite teams and competitions.",
@@ -262,12 +297,33 @@ export const translations: Translations = {
         {
             id: 9,
             title: "Tax Centre UI Website",
+            category: ["Real Projects"],
             tags: ["UI/UX Design", "Company Profile", "Tax"],
             imageUrl: "/logo/Taxfia.png",
             description: "Designed the official website for Tax Centre UI as part of a contract project under Ristek Fasilkom UI. Focused on creating a clean, accessible, and responsive interface that aligns with the institution’s branding. Delivered a modern and informative platform that helps users easily navigate tax-related content..",
             link: "#",
             gradient: "from-pink-600 to-rose-700",
         },
+        {
+          id: 10,
+          title: "Cari.in: Competition & Team Finder",
+          category: ["Competition"],
+          tags: ["Business Plan", "EdTech", "Startup"],
+          imageUrl: "/logo/cariin.png",
+          description: "Cari.in is an innovative digital platform designed to help Indonesian university students discover competition opportunities, form teams, develop practical skills, and build digital portfolios tailored to current and future industry demands.\n This project was presented in a business plan competition, where we successfully ranked in the Top 5 finalists.",
+          link: "https://drive.google.com/file/d/14XUMxkMtvEtYhvKr26OLze8K_QthDL7Q/view?usp=sharing",
+          gradient: "from-pink-600 to-rose-700",
+      },
+      {
+        id: 11,
+        title: "Artera: New Hope For Digital Artist",
+        category: ["College Projects"],
+        tags: ["Digital Art", "University Project", "Creative Platform"],
+        imageUrl: "/logo/artera.png",
+        description: "Cari.in is an innovative digital platform designed to help Indonesian university students discover competition opportunities, form teams, develop practical skills, and build digital portfolios tailored to current and future industry demands.\n This project was presented in a business plan competition, where we successfully ranked in the Top 5 finalists.",
+        link: "https://drive.google.com/file/d/1DzX2wkF_qjFlhSi_VW8kwr5uFX3mHpDz/view?usp=sharing",
+        gradient: "from-pink-600 to-rose-700",
+    },
     ],
     projectAccessLocked: "Access Locked",
     projectSeeDetails: "See Details",
@@ -282,12 +338,11 @@ export const translations: Translations = {
 
     // Navbar
     navItems: [
-      { name: "Home", href: "#hero" },
-      { name: "Resume", href: "#resume" },
-      { name: "Skills", href: "#skills" },
-      { name: "Portfolio", href: "#portfolio" },
-      { name: "Contact", href: "#contact" },
-    ],
+      { name: "Home", href: "/" },
+      { name: "About", href: "/about" },
+      { name: "Portfolio", href: "/portfolio" },
+    ]
+    ,
 
     // Footer
     footerRightsReserved: "All rights reserved.",
@@ -384,6 +439,7 @@ export const translations: Translations = {
         {
             id: 1,
             title: "Open House Fasilkom UI 2023",
+            category: ["College Projects"],
             tags: ["Desain UI/UX", "Halaman Registrasi", "Acara"],
             imageUrl: "/logo/oh 2023.png",
             description: "Merancang Halaman Registrasi Beranda untuk Open House Fasilkom UI 2023, menampilkan hitung mundur, detail acara, manfaat, FAQ, dan akses kontak untuk pengalaman peserta yang mulus.",
@@ -393,6 +449,7 @@ export const translations: Translations = {
         {
             id: 2,
             title: "Situs Web Pemira Fasilkom UI 2023",
+            category: ["College Projects"],
             tags: ["Desain UI/UX", "E-Voting", "Pemilihan"],
             imageUrl: "/logo/PEMIRA 2023.png",
             description: "Merancang Halaman Utama, Kandidat, dan halaman E-Voting untuk Pemira Fasilkom UI 2023, memastikan pengalaman intuitif dengan informasi yang jelas, navigasi yang lancar, dan fungsionalitas pemungutan suara yang aman.",
@@ -402,6 +459,7 @@ export const translations: Translations = {
         {
             id: 3,
             title: "SIBeasiswa NG",
+            category: ["College Projects"],
             tags: ["Desain UI/UX", "CMS", "Beasiswa"],
             imageUrl: "/logo/SiBeasiswa.png",
             description: "Merancang situs web beasiswa dan CMS yang ramah pengguna sebagai bagian dari rekrutmen terbuka untuk SIG Desain Produk Digital Ristek Fasilkom UI. Platform ini menyederhanakan penemuan beasiswa, manajemen aplikasi, dan pengiriman dokumen untuk mahasiswa, sambil menawarkan alat admin yang efisien untuk mengelola dan meninjau pengajuan.",
@@ -411,6 +469,7 @@ export const translations: Translations = {
         {
             id: 4,
             title: "Situs Web The 47th Jazz Goes to Campus",
+            category: ["College Projects"],
             tags: ["Desain UI/UX", "Acara", "Festival"],
             imageUrl: "/logo/JGTC.png",
             description: "Dirancang untuk Situs Web The 47th Jazz Goes to Campus, Halaman Beranda memperkenalkan acara, Galeri menampilkan foto dan sorotan, bagian Tentang Kami menceritakan sejarah acara, dan halaman Registrasi Band menawarkan proses registrasi yang disederhanakan untuk peserta kontes band.",
@@ -420,6 +479,7 @@ export const translations: Translations = {
         {
             id: 5,
             title: "Pembaruan  Situs Web RISTEK Summer Event",
+            category: ["College Projects"],
             tags: ["Desain UI/UX", "Pembaruan ", "Acara Teknologi"],
             imageUrl: "/logo/Summer Event.png",
             description: "Mengerjakan pembaruan  kecil untuk situs web RISTEK Summer Event 2024, termasuk penyesuaian pada halaman arahan dan halaman acara untuk kejelasan dan alur visual yang lebih baik. Menambahkan formulir dinamis untuk menyederhanakan proses registrasi, membuatnya lebih mulus dan interaktif bagi peserta.",
@@ -429,6 +489,7 @@ export const translations: Translations = {
         {
             id: 6,
             title: "InteractEd: Mendefinisikan Ulang Pendidikan Anak Usia Dini!",
+            category: ["College Projects"],
             tags: ["Desain UI/UX", "Proyek Kuliah", "Pendidikan"],
             imageUrl: "/logo/InteractEd.png",
             description: "Kelompok saya dan saya merancang InteractEd untuk proyek akhir mata kuliah HCI, InteractEd adalah platform pembelajaran interaktif untuk anak-anak usia 6–13 tahun. Ini menggunakan pembelajaran berbasis proyek untuk membantu anak-anak mengembangkan keterampilan, mengeksplorasi minat, dan berkolaborasi dengan teman sebaya dengan cara yang menyenangkan dan menarik.",
@@ -438,6 +499,7 @@ export const translations: Translations = {
         {
             id: 7,
             title: "Aplikasi Survey Kesehatan",
+            category: ["College Projects"],
             tags: ["Desain UI/UX", "Mobile", "Kesehatan"],
             imageUrl: "/logo/Healthcare App.png",
             description: "Dirancang untuk aplikasi e-health sebagai proyek kontrak selama saya menjadi anggota Desain Produk Digital di Ristek Fasilkom UI, aplikasi ini mencakup fitur seperti survei, e-learning, manajemen dokumen, dan konsultasi. Ini memberikan pengguna pengalaman yang mulus dan ramah pengguna, memungkinkan akses mudah ke sumber daya kesehatan dan interaksi yang efisien dengan penyedia layanan kesehatan.",
@@ -447,6 +509,7 @@ export const translations: Translations = {
         {
             id: 8,
             title: "Aplikasi Sepak Bola",
+            category: ["College Projects"],
             tags: ["Desain UI/UX", "Mobile", "Sepak Bola"],
             imageUrl: "/logo/Football.png",
             description: "Merancang aplikasi sepak bola sebagai proyek kontrak selama saya menjadi anggota Desain Produk Digital di Ristek Fasilkom UI yang menampilkan berita, klasemen, detail pemain dan pelatih, hasil pertandingan, dan jadwal. Aplikasi ini memberikan pengalaman yang komprehensif dan ramah pengguna, menjaga penggemar tetap terinformasi dan terlibat dengan tim dan kompetisi favorit mereka.",
@@ -456,12 +519,14 @@ export const translations: Translations = {
         {
             id: 9,
             title: "Situs Web Tax Centre UI",
+            category: ["College Projects"],
             tags: ["Desain UI/UX", "Profil Perusahaan", "Pajak"],
             imageUrl: "/logo/Taxfia.png",
             description: "Merancang situs web resmi untuk Tax Centre UI sebagai bagian dari proyek kontrak di bawah Ristek Fasilkom UI. Berfokus pada pembuatan antarmuka yang bersih, mudah diakses, dan responsif yang selaras dengan branding institusi. Menghasilkan platform modern dan informatif yang membantu pengguna dengan mudah menavigasi konten terkait pajak.",
             link: "#",
             gradient: "from-pink-600 to-rose-700",
         },
+        
     ],
     projectAccessLocked: "Akses Terkunci",
     projectSeeDetails: "Lihat Detail",
@@ -474,12 +539,11 @@ export const translations: Translations = {
     contactFormSubmitError: "Gagal mengirim formulir. Silakan coba lagi nanti.",
 
     // Navbar
+    // LangContext.ts (atau wherever your translations live)
     navItems: [
-      { name: "Beranda", href: "#hero" },
-      { name: "Resume", href: "#resume" },
-      { name: "Keahlian", href: "#skills" },
-      { name: "Portofolio", href: "#portfolio" },
-      { name: "Kontak", href: "#contact" },
+      { name: "Beranda", href: "/" },
+      { name: "Tentang", href: "/about" },
+      { name: "Portofolio", href: "/portfolio" },
     ],
 
     // Footer

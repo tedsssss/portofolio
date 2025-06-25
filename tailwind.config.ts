@@ -17,7 +17,7 @@ const config = {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+        sans: ['"Poppins"', 'sans-serif'],
       },      
     },
   },
