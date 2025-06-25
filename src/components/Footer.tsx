@@ -30,7 +30,7 @@ export default function Footer() {
         <div>
           <h4 className="text-lg font-medium mb-3">A Note from Me</h4>
           <p className="text-gray-600 leading-relaxed">
-            {`“${currentTranslations.footerQuote || 'Great design is born of simplicity and clarity.'}”`}
+            { 'Great design is born of simplicity and clarity.'}
           </p>
         </div>
       </div>
