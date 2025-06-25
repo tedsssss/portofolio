@@ -320,7 +320,7 @@ export const translations: Translations = {
         category: ["College Projects"],
         tags: ["Digital Art", "University Project", "Creative Platform"],
         imageUrl: "/logo/artera.png",
-        description: "Cari.in is an innovative digital platform designed to help Indonesian university students discover competition opportunities, form teams, develop practical skills, and build digital portfolios tailored to current and future industry demands.\n This project was presented in a business plan competition, where we successfully ranked in the Top 5 finalists.",
+        description: "Artera is a digital platform developed to support and empower Indonesian illustrators and digital artists through a fair, transparent system focused on copyright protection.\nThe platform offers features for showcasing and selling artworks, global market access, fair pricing guidelines, and a supportive, educational community.",
         link: "https://drive.google.com/file/d/1DzX2wkF_qjFlhSi_VW8kwr5uFX3mHpDz/view?usp=sharing",
         gradient: "from-pink-600 to-rose-700",
     },
